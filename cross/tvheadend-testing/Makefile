@@ -1,10 +1,12 @@
-PKG_NAME = tvheadend
-PKG_VERS = 4.2.4
+PKG_NAME = tvheadend-testing
+PKG_VERS = 4.3.229
 PKG_EXT = tar.gz
-PKG_DIST_NAME = v$(PKG_VERS).$(PKG_EXT)
-PKG_DIST_SITE = https://github.com/tvheadend/tvheadend/archive
-PKG_DIR = $(PKG_NAME)-$(PKG_VERS)
-PKG_DIST_FILE = $(PKG_NAME)-$(PKG_VERS).$(PKG_EXT)
+PKG_DOWNLOAD_METHOD = git
+PKG_GIT_HASH = 2a77c08a94
+PKG_DIST_NAME = tvheadend.git
+PKG_DIST_SITE = https://github.com/tvheadend
+PKG_DIST_FILE = $(PKG_NAME)-git$(PKG_GIT_HASH).$(PKG_EXT)
+PKG_DIR = $(PKG_NAME)-git*
 
 DEPENDS = cross/openssl cross/libhdhomerun cross/uriparser cross/libdvbcsa
 DEPENDS += cross/dvb-apps cross/ffmpeg
@@ -20,7 +22,7 @@ CONFIGURE_ARGS += --disable-hdhomerun_static --enable-hdhomerun_client
 CONFIGURE_ARGS += --disable-ffmpeg_static --enable-libav
 
 INSTALL_TARGET = myInstall
-POST_PATCH_TARGET = post_patch_target_tvheadend
+POST_PATCH_TARGET = post_patch_target_tvheadend-testing
 
 include ../../mk/spksrc.cross-cc.mk
 
@@ -29,7 +31,7 @@ include ../../mk/spksrc.cross-cc.mk
 myInstall:
 	$(RUN) make install DESTDIR=$(INSTALL_DIR)
 
-post_patch_target_tvheadend:
+post_patch_target_tvheadend-testing:
 	@if [ "$(ARCH)" = "ppc853x" ] || [ "$(ARCH)" = "qoriq" ]; then \
 		cat $(PWD)/patches/ppc/isoc9x.patch | ($(RUN) patch -p0) ;\
 	fi;

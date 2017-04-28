@@ -1,8 +1,8 @@
 #!/bin/sh
 
 # Package
-PACKAGE="tvheadend"
-DNAME="Tvheadend"
+PACKAGE="tvheadend-testing"
+DNAME="Tvheadend-Testing"
 
 # Others
 INSTALL_DIR="/usr/local/${PACKAGE}"
@@ -14,10 +14,10 @@ BUILDNUMBER="$(/bin/get_key_value /etc.defaults/VERSION buildnumber)"
 FWPORTS="/var/packages/${PACKAGE}/scripts/${PACKAGE}.sc"
 
 DSM6_UPGRADE="${INSTALL_DIR}/var/.dsm6_upgrade"
-SC_USER="sc-tvheadend"
+SC_USER="sc-tvheadend-testing"
 SC_GROUP="sc-media"
 SC_GROUP_DESC="SynoCommunity's media related group"
-LEGACY_USER="tvheadend"
+LEGACY_USER="tvheadend-testing"
 LEGACY_GROUP="users"
 USER="$([ "${BUILDNUMBER}" -ge "7321" ] && echo -n ${SC_USER} || echo -n ${LEGACY_USER})"
 

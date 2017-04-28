@@ -1,8 +1,8 @@
 #!/bin/sh
 
 # Package
-PACKAGE="tvheadend"
-DNAME="Tvheadend"
+PACKAGE="tvheadend-testing"
+DNAME="Tvheadend-testing"
 
 # Others
 INSTALL_DIR="/usr/local/${PACKAGE}"
@@ -11,8 +11,8 @@ BUILDNUMBER="$(/bin/get_key_value /etc.defaults/VERSION buildnumber)"
 TVHEADEND="${INSTALL_DIR}/bin/tvheadend"
 PID_FILE="${INSTALL_DIR}/var/tvheadend.pid"
 
-SC_USER="sc-tvheadend"
-LEGACY_USER="tvheadend"
+SC_USER="sc-tvheadend-testing"
+LEGACY_USER="tvheadend-testing"
 USER="$([ "${BUILDNUMBER}" -ge "7321" ] && echo -n ${SC_USER} || echo -n ${LEGACY_USER})"
 
 
