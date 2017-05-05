@@ -9,7 +9,7 @@ DEPENDS = cross/busybox cross/$(SPK_NAME)
 
 MAINTAINER = m4tt075
 DESCRIPTION = Tvheadend is a TV streaming server and recorder for Linux, FreeBSD and Android supporting DVB-S, DVB-S2, DVB-C, DVB-T, ATSC, ISDB-T, IPTV, SAT IP and HDHomeRun as input sources. Tvheadend offers HTTP, HTSP and SAT IP streaming.
-ADMIN_PORT = 9981
+ADMIN_PORT = 9991
 RELOAD_UI = yes
 DISPLAY_NAME = Tvheadend-Testing
 CHANGELOG = "Update to Tvheadend 4.3.229"

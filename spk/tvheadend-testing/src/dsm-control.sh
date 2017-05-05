@@ -18,7 +18,7 @@ USER="$([ "${BUILDNUMBER}" -ge "7321" ] && echo -n ${SC_USER} || echo -n ${LEGAC
 
 start_daemon ()
 {
-    ${TVHEADEND} -f -u ${USER} -c ${INSTALL_DIR}/var -p ${PID_FILE}
+    ${TVHEADEND} --http_port 9991 --htsp_port 9992 -f -u ${USER} -c ${INSTALL_DIR}/var -p ${PID_FILE}
 }
 
 stop_daemon ()

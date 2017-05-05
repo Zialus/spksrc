@@ -16,8 +16,8 @@
         }]
     }]
 }, {
-    "step_title": "Attention! DSM6 Premissions",
+    "step_title": "Attention!",
     "items": [{
-        "desc": "Permissions are managed with the group 'sc-media' in DSM."
+        "desc": "Permissions are managed with the group 'sc-media' in DSM6. Testing package runs on non-standard http port 9991 and htsp port 9992."
     }]
 }]

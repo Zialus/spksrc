@@ -6,7 +6,7 @@
             "icon": "images/tvheadend-testing-{0}.png",
             "type": "url",
             "protocol": "http",
-            "port": "9981",
+            "port": "9991",
             "url": "/",
             "allUsers": true,
             "grantPrivilege": "local"
