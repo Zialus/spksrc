@@ -11,6 +11,13 @@ HOMEPAGE = http://x265.org/
 COMMENT  = x265 is an open source HEVC encoder.
 LICENSE  = GPL
 
+#ifdef TVH_TRANSCODE
+ifeq ($(findstring $(ARCH), $(ARM7_ARCHES)),$(ARCH))
+POST_PATCH_TARGET = post_patch_target_tvh_transcode_pic
+else
+POST_PATCH_TARGET = post_patch_target_tvh_transcode_pie
+endif
+#endif
 CONFIGURE_TARGET = myConfigure
 
 YASM_PATH = $(WORK_DIR)/../../../native/yasm/work-native/install/usr/local/bin
@@ -66,3 +73,10 @@ endif
 myConfigure:
 	$(RUN) cmake $(CMAKE_ARGS) .
 
+.PHONY: post_patch_target_tvh_transcode_pic
+post_patch_target_tvh-transcode-pic:
+	cat $(PWD)/patches/tvh-transcode/001-CMakeLists-pic-enabled.patch | ($(RUN) patch -p0)
+
+.PHONY: post_patch_target_tvh_transcode_pie
+post_patch_target_tvh-transcode-pie:
+	cat $(PWD)/patches/tvh-transcode/001-CMakeLists-pie-enabled.patch | ($(RUN) patch -p0)

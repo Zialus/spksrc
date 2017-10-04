@@ -1,0 +1,26 @@
+# Fix for pie-enabled configurations
+--- source/CMakeLists.txt.orig	2017-09-20 21:50:56.719057482 +0200
++++ source/CMakeLists.txt	2017-09-20 21:51:51.155274378 +0200
+@@ -192,7 +192,7 @@
+         add_definitions(-std=gnu++98)
+     endif()
+     if(ENABLE_PIC)
+-         add_definitions(-fPIC)
++         add_definitions(-fPIE)
+     endif(ENABLE_PIC)
+     if(NATIVE_BUILD)
+         if(INTEL_CXX)
+@@ -211,11 +211,11 @@
+         endif()
+     endif()
+     if(ARM AND CROSS_COMPILE_ARM)
+-        set(ARM_ARGS -march=armv6 -mfloat-abi=soft -mfpu=vfp -marm -fPIC)
++        set(ARM_ARGS -march=armv6 -mfloat-abi=soft -mfpu=vfp -marm -fPIE)
+     elseif(ARM)
+         find_package(Neon)
+         if(CPU_HAS_NEON)
+-            set(ARM_ARGS -mcpu=native -mfloat-abi=hard -mfpu=neon -marm -fPIC)
++            set(ARM_ARGS -mcpu=native -mfloat-abi=hard -mfpu=neon -marm -fPIE)
+             add_definitions(-DHAVE_NEON)
+         else()
+             set(ARM_ARGS -mcpu=native -mfloat-abi=hard -mfpu=vfp -marm)

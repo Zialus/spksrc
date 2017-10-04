@@ -5,6 +5,8 @@ SPK_ICON = src/tvheadend-testing.png
 DSM_UI_DIR = app
 BETA = 1
 
+export TVH_TRANSCODE = true
+
 DEPENDS = cross/busybox cross/$(SPK_NAME)
 
 MAINTAINER = m4tt075

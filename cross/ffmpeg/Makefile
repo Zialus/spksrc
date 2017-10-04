@@ -63,3 +63,13 @@ else
 DEPENDS += cross/x265
 endif
 
+#ifdef TVH_TRANSCODE
+POST_PATCH_TARGET = post_patch_target_tvh_transcode
+#endif
+
+
+.PHONY: post_patch_target_tvh_transcode
+post_patch_target_tvh-transcode:
+        cat $(PWD)/patches/tvh-transcode/001-libx264-rename-profile.patch | ($(RUN) patch -p0)
+        cat $(PWD)/patches/tvh-transcode/002-libx265-compat-fix.patch | ($(RUN) patch -p0)
+        cat $(PWD)/patches/tvh-transcode/003-vaapi_encode-compat-fix.patch | ($(RUN) patch -p0)

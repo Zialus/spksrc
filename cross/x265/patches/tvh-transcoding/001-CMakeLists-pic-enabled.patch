@@ -1,0 +1,16 @@
+# Fix for pic-enabled configurations
+--- source/CMakeLists.txt.orig	2017-07-13 13:20:07.000000000 +0200
++++ source/CMakeLists.txt	2017-09-28 20:59:56.640759944 +0200
+@@ -111,11 +111,7 @@
+     endif(NO_ATOMICS)
+ endif(UNIX)
+ 
+-if(X64 AND NOT WIN32)
+-    option(ENABLE_PIC "Enable Position Independent Code" ON)
+-else()
+-    option(ENABLE_PIC "Enable Position Independent Code" OFF)
+-endif(X64 AND NOT WIN32)
++option(ENABLE_PIC "Enable Position Independent Code" ON)
+ 
+ # Compiler detection
+ if(CMAKE_GENERATOR STREQUAL "Xcode")
