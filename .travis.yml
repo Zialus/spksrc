@@ -4,7 +4,7 @@
 
 env:
   global:
-    - PKG=mono
+    - PKG=jackett
   matrix:
     - SYNOARCH=arch-88f6281-6.1
     - SYNOARCH=arch-alpine-6.1
