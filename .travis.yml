@@ -4,7 +4,7 @@
 
 env:
   global:
-    - PKG=jackett
+    - PKG=ffmpeg
   matrix:
     - SYNOARCH=arch-88f6281-6.1
     - SYNOARCH=arch-alpine-6.1
@@ -25,8 +25,8 @@ env:
     - SYNOARCH=arch-grantley-6.1
     - SYNOARCH=arch-hi3535-6.1
     - SYNOARCH=arch-monaco-6.1
-#    - SYNOARCH=arch-qoriq-6.1
-    - SYNOARCH=arch-rtd1296-6.1
+    - SYNOARCH=arch-qoriq-6.1
+#    - SYNOARCH=arch-rtd1296-6.1
     - SYNOARCH=arch-x64-6.1
     - SYNOARCH=arch-x86-6.1
 
