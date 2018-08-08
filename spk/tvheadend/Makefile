@@ -1,5 +1,5 @@
 SPK_NAME = tvheadend
-SPK_VERS = 4.3.1252
+SPK_VERS = 4.3.1292
 SPK_REV = 14
 SPK_ICON = src/tvheadend.png
 DSM_UI_DIR = app
@@ -12,7 +12,7 @@ DESCRIPTION = Tvheadend is a TV streaming server and recorder for Linux, FreeBSD
 RELOAD_UI = yes
 DISPLAY_NAME = Tvheadend
 STARTABLE = yes
-CHANGELOG = "1. Update TVH to current 4.3 master branch"
+CHANGELOG = "Update to Tvheadend 4.3.1292"
 HOMEPAGE = https://www.lonelycoder.com/tvheadend/
 LICENSE = GPL v3
 
