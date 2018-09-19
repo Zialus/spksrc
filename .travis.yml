@@ -4,7 +4,7 @@
 
 env:
   global:
-    - PKG=gateone
+    - PKG=znc
   matrix:
     - SYNOARCH=arch-88f6281-6.1
     - SYNOARCH=arch-alpine-6.1
@@ -27,7 +27,7 @@ env:
     - SYNOARCH=arch-hi3535-6.1
     - SYNOARCH=arch-kvmx64-6.1
     - SYNOARCH=arch-monaco-6.1
-#    - SYNOARCH=syno-northstarplus-1.1
+    - SYNOARCH=syno-northstarplus-1.1
     - SYNOARCH=arch-qoriq-6.1
     - SYNOARCH=arch-rtd1296-6.1
     - SYNOARCH=arch-x64-6.1
