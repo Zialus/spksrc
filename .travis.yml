@@ -4,9 +4,9 @@
 
 env:
   global:
-    - PKG=znc
+    - PKG=tvheadend
   matrix:
-#    - SYNOARCH=arch-88f6281-6.1
+    - SYNOARCH=arch-88f6281-6.1
     - SYNOARCH=arch-alpine-6.1
     - SYNOARCH=arch-apollolake-6.1
     - SYNOARCH=arch-armada370-6.1
@@ -37,7 +37,7 @@ env:
 #    - SYNOARCH=arch-alpine-5.2
 #    - SYNOARCH=arch-armada370-5.2
 #    - SYNOARCH=arch-armada375-5.2
-    - SYNOARCH=arch-armada38x-5.2
+#    - SYNOARCH=arch-armada38x-5.2
 #    - SYNOARCH=arch-armadaxp-5.2
 #    - SYNOARCH=arch-avoton-5.2
 #    - SYNOARCH=arch-braswell-5.2
@@ -45,7 +45,7 @@ env:
 #    - SYNOARCH=arch-cedarview-5.2
 #    - SYNOARCH=arch-comcerto2k-5.2
 #    - SYNOARCH=arch-evansport-5.2
-    - SYNOARCH=arch-monaco-5.2
+#    - SYNOARCH=arch-monaco-5.2
 #    - SYNOARCH=arch-ppc853x-5.2
 #    - SYNOARCH=arch-qoriq-5.2
 #    - SYNOARCH=arch-x64-5.2
