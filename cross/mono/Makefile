@@ -28,6 +28,11 @@ CONFIGURE_ARGS += --enable-btls
 
 include ../../mk/spksrc.cross-cc.mk
 
+AG_ARGS = --disable-mcs-build
+ifeq ($(findstring $(ARCH), $(ARM_ARCHES)),$(ARCH))
+	AG_ARGS += --host=arm-linux
+endif
+
 .PHONY: mono_pre_configure
 mono_pre_configure:
-	$(RUN) ; ./autogen.sh
+	$(RUN) ; ./autogen.sh ${AG_ARGS}
