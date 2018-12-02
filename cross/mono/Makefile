@@ -14,25 +14,27 @@ COMMENT  = Cross platform, open source .NET development framework
 LICENSE  = http://www.mono-project.com/docs/faq/licensing
 
 REQUIRED_DSM = 5.0
-UNSUPPORTED_ARCHS = $(PPC_ARCHES)
+#UNSUPPORTED_ARCHS = $(PPC_ARCHES)
 GNU_CONFIGURE = 1
 PRE_CONFIGURE_TARGET = mono_pre_configure
 
-# Avoid building C# code (built natively)
 CONFIGURE_ARGS = --disable-mcs-build
 
+# Avoid building C# code (built natively)
 # force building with BTLS
 # needed for platforms compiling with gcc < 4.8
 # patches/001-add-boringssl-alignas-support.patch adds the necessary compatibility
-CONFIGURE_ARGS += --enable-btls
+CONFIGURE_ARGS = --disable-mcs-build --enable-btls
+ifeq ($(findstring $(ARCH), $(ARM_ARCHES)),$(ARCH))
+CONFIGURE_ARGS += --host=arm-linux
+else
+ifeq ($(findstring $(ARCH), $(PPC_ARCHES)),$(ARCH))
+CONFIGURE_ARGS += --host=ppc64
+endif
+endif
 
 include ../../mk/spksrc.cross-cc.mk
 
-AG_ARGS = --disable-mcs-build
-ifeq ($(findstring $(ARCH), $(ARM_ARCHES)),$(ARCH))
-	AG_ARGS += --host=arm-linux
-endif
-
 .PHONY: mono_pre_configure
 mono_pre_configure:
-	$(RUN) ; ./autogen.sh ${AG_ARGS}
+	$(RUN) ; ./autogen.sh ${CONFIGURE_ARGS}
