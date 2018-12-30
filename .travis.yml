@@ -28,7 +28,7 @@ env:
     - SYNOARCH=arch-kvmx64-6.1
     - SYNOARCH=arch-monaco-6.1
 #    - SYNOARCH=syno-northstarplus-1.1
-    - SYNOARCH=arch-qoriq-6.1
+#    - SYNOARCH=arch-qoriq-6.1
     - SYNOARCH=arch-rtd1296-6.1
     - SYNOARCH=arch-x64-6.1
     - SYNOARCH=arch-x86-6.1
