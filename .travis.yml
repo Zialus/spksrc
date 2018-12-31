@@ -4,21 +4,21 @@
 
 env:
   global:
-    - PKG=mono
+    - PKG=htop
   matrix:
 # 6.1 and 6.2 toolchains
 # ARM5 arches
     - SYNOARCH=arch-88f6281-6.1
 # ARM7 arches
-    - SYNOARCH=arch-alpine-6.1
-    - SYNOARCH=arch-armada370-6.1
-    - SYNOARCH=arch-armada375-6.1
-    - SYNOARCH=arch-armada38x-6.1
-    - SYNOARCH=arch-armadaxp-6.1
-    - SYNOARCH=arch-comcerto2k-6.1
-    - SYNOARCH=arch-hi3535-6.1
-    - SYNOARCH=arch-ipq806x-6.1
-    - SYNOARCH=arch-monaco-6.1
+#     - SYNOARCH=arch-alpine-6.1
+#     - SYNOARCH=arch-armada370-6.1
+#     - SYNOARCH=arch-armada375-6.1
+#     - SYNOARCH=arch-armada38x-6.1
+#     - SYNOARCH=arch-armadaxp-6.1
+#     - SYNOARCH=arch-comcerto2k-6.1
+#     - SYNOARCH=arch-hi3535-6.1
+#     - SYNOARCH=arch-ipq806x-6.1
+#     - SYNOARCH=arch-monaco-6.1
 #    - SYNOARCH=syno-northstarplus-1.1
 # ARM8 arches (binary compatible, just build aarch64)
 #   - SYNOARCH=arch-rtd1296-6.1
@@ -27,9 +27,9 @@ env:
 # PPC arches
 #    - SYNOARCH=arch-qoriq-6.1
 # x86 arches
-    - SYNOARCH=arch-evansport-6.1
+#     - SYNOARCH=arch-evansport-6.1
 # x64 arches (binary compatible, just build x64)
-#   - SYNOARCH=arch-apollolake-6.1
+    - SYNOARCH=arch-apollolake-6.1
 #   - SYNOARCH=arch-avoton-6.1
 #   - SYNOARCH=arch-braswell-6.1
 #   - SYNOARCH=arch-broadwell-6.1
@@ -89,7 +89,7 @@ git:
 deploy:
   provider: releases
   api_key:
-    secure: ViqjFt+w38UwbZxMfanxJIjcukMQnxG5Vcjx7oHHvN5gk5WPEusqaV2qFTZZNvYt5Gj9b9eOD9lwgnk+oc+ELSspw8BXwIgnOnQmegNyYVTnsTeyA5Tj2+tq1uNY/ScQAGaG6dlYkFohUR65n1BgJcDs/zANppPRRjer/QnLLt4j7/x+PRRxZetNZzY7AVnbuRkII/NuhUC+72qSnsfRMJ0DGOQeFZhjHybNEl9xTdRv3xfHLgKeAsWwZsnthhE26t/Cc+Slxt8JzQpz/SkLPFiTqHRarQyoV3bKj4Y6imYBxZL3g4t3cScbEt4jE3VG8fmR4qlYLK0ndeLG/eIOB7vH9aormTu5DWUHgKl7IUPlzsC/t05vt+p5N5uXkUQkDbFADNfjuF8na1n5M7mOIEqhy5IIXWGm1guDSQMj9Tu8wGYZZ/D2c+4eplkLjEEu8OSMjreZG7G88uVJVYrFAXWqWuaO5nuD5oOyap/bIHkqcbyHl29ooPnKk989KFk6olaLH56b/i4TQYP4PLN64BW/HiBpbiBNDS+I4S5XWGZpwRV3nPyoMf5Oy8r06Cu+pAkf7zDaAQvxSFRSw5cGf8h4yDar8Y4HbICQTXa/HOhjiyUwivzuFyLoxnoUQffsWqm19HtghopfCsnTACcNXXJq8cwDwgRqw89jwEFmbl4=
+    secure: Kn+VfZ6Zu0BpGbEavf4lcyTq7yXDem8Ldwawv0bkqVhxO3Z5IO1OU5rj5f6V6or8aJjnEyljUkFn/LldzUyg9Or9w0TyFZCWevTHyWug6On/LkGC4Pypc6l62magJgfJkI8BRgurNxRFN8rjZRAnyIQQGUqKbh1ItG/LeQpE/gVZ/TJYJNGlT4DCPgg+nl9dQeE0P8cr7fHANHFnDruOgYiGtnsXrK2a+NhsrvI2qsaXuPi3JG/ml6Il6ZVRX8Q5tvHzBXOqg4+BQTgq+SHBeAslbGYJsmXaHoFeZi6GdyV2YyFTJCGXzRicXAG/DeebrB24E9M4RFxihhL0k7BNeuY31Er43+PK6hN5ctnyOaSz8utOYTWke+iPcB143EyglBaBRJ9fcz5HtbEaHKKLbAXfTtcS9+2vWZQ/EX2f+BgcKwItcsFEI9G2zFh2+OHKtDYqwIjr8y2FY6GNBmCWCNahUGbFjRKcmPql5gzMhon+z+p8NhsKF42m/SuKJ4hBrHWzHYzaqmduoAVDeEaoH/KOaXRY/jRVXRPsTKB6iWGTMS8NlXW4W5nzvnlxAEkft9RAMlcksPq/7WcS+lyibgIBGIKzAn2IDuwAWFz4/l7xm6YoZY3swq3B9Gbo/9Ao7pRvNQZErDN7g2agmQdqGm34jsgZ7DjyPEEx8PDnI+4=
   file_glob: true
   file: packages/*.spk
   skip_cleanup: true
