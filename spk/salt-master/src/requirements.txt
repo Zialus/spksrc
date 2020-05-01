@@ -1,4 +1,4 @@
-salt==2015.5.3
+salt==2019.2.4
 Jinja2
 requests>=1.0.0
 CherryPy
