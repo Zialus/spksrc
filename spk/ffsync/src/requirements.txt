@@ -45,7 +45,7 @@ pyramid_jinja2==2.3.3
 #repoze.lru==0.6
 #requests==2.4.3
 #simplejson==3.6.5
-Sphinx==1.3b1
+Sphinx==3.0.4
 #SQLAlchemy==0.9.8
 #testfixtures==4.1
 #tokenlib==0.3.1
