@@ -27,7 +27,7 @@ Mako==1.0.0
 MarkupSafe==0.23
 mimerender==0.5.4
 oauthlib==0.7.2
-passlib==1.6.2
+passlib==1.7.3
 python-dateutil==2.2
 python-mimeparse==0.1.4
 pytz==2014.7
