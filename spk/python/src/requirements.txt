@@ -32,7 +32,7 @@ markdown==2.6.11
 # These also depends on cross/cffi and cross/openssl,
 # which are installed through cross/bcrypt
 pyOpenSSL==17.5.0
-cryptography==2.1.4
+cryptography==3.3.2
 pyasn1==0.4.2
 asn1crypto==0.24.0
 enum34==1.1.6
