@@ -21,11 +21,12 @@ pylast==1.7.0
 python-mpd2==1.0.0
 #PyYAML==3.12
 # For most API dependant plugins
-requests==2.19.1
+requests==2.20
 requests-oauthlib==1.0.0
 #six==1.10.0
 Unidecode==1.0.22
 #virtualenv==15.1.0
-Werkzeug==0.14.1
+Werkzeug==0.15.3
 # For chroma
 pyacoustid==1.1.5
+urllib3>=1.25.9 # not directly required, pinned by Snyk to avoid a vulnerability
