@@ -68,7 +68,7 @@ PyBrowserID==0.9.2
 PyMySQL==0.6.2
 #SQLAlchemy==0.9.8
 WSGIProxy==0.2.2
-WebOb==1.4
+WebOb==1.6.0a0
 WebTest==2.0.16
 argparse==1.2.1
 beautifulsoup4==4.3.2
